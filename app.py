@@ -11,7 +11,6 @@ def verify_hmac_hash(data, signature):
 
 app = Flask(__name__)
 
-subprocess.Popen(DEPLOY_COMMAND, shell=True)
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
