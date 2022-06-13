@@ -11,6 +11,8 @@ def verify_hmac_hash(data, signature):
 
 app = Flask(__name__)
 
+subprocess.Popen(DEPLOY_COMMAND, shell=True)
+
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     if(verify_hmac_hash(request.data,request.headers.get('X-Hub-Signature-256'))):
