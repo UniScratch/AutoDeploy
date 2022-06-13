@@ -1,2 +1,2 @@
 SECRET="Your Secret Here"
-DEPLOY_COMMAND="cd /path/to/file;git pull;yarn;yarn build"
+DEPLOY_COMMAND="bash ./build.sh"
